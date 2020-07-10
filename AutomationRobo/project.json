@@ -40,21 +40,25 @@
     },
     "fileInfoCollection": [
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "44f822dd-00a7-4604-aaa6-fa230989b869",
         "fileName": "TestCase\\RPA_ChallengeTest-Pass.xaml"
       },
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "5e6b454a-90e3-4df0-a66b-fea0c22374c2",
         "fileName": "TestCase\\RPA_ChallengeTest - Fail.xaml"
       },
       {
-        "editingStatus": "InProgress",
+        "editingStatus": "Publishable",
         "testCaseId": "fad659bf-9fda-4e43-be8f-fbf25624f7f6",
         "fileName": "TestCase\\apiTest.xaml"
       }
     ]
+  },
+  "arguments": {
+    "input": [],
+    "output": []
   },
   "expressionLanguage": "VisualBasic"
 }
