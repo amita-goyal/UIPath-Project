@@ -1,0 +1,60 @@
+{
+  "name": "AutomationRobo",
+  "description": "Dynamic Web Form Automation RPA Challenge",
+  "main": "TestCase\\Main.xaml",
+  "dependencies": {
+    "UiPath.Excel.Activities": "[2.9.0-preview]",
+    "UiPath.Jira.Activities": "[0.1.0-preview]",
+    "UiPath.JiraSoftware.Activities": "[1.0.3.22730]",
+    "UiPath.Mail.Activities": "[1.9.0-preview]",
+    "UiPath.System.Activities": "[20.6.1-preview]",
+    "UiPath.Testing.Activities": "[1.0.0]",
+    "UiPath.UIAutomation.Activities": "[20.6.0-preview]",
+    "UiPath.WebAPI.Activities": "[1.4.5]",
+    "UiPathTeam.Confluence.Activities": "[1.0.0.69]",
+    "UiPathTeam.DatatableConverter.Activities": "[1.0.1]",
+    "UiPathTeam.JiraGet.Activities": "[1.0.0.116]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "20.6.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "44f822dd-00a7-4604-aaa6-fa230989b869",
+        "fileName": "TestCase\\RPA_ChallengeTest-Pass.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "5e6b454a-90e3-4df0-a66b-fea0c22374c2",
+        "fileName": "TestCase\\RPA_ChallengeTest - Fail.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "fad659bf-9fda-4e43-be8f-fbf25624f7f6",
+        "fileName": "TestCase\\apiTest.xaml"
+      }
+    ]
+  },
+  "expressionLanguage": "VisualBasic"
+}
