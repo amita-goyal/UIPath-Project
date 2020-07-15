@@ -54,7 +54,12 @@
       {
         "editingStatus": "Publishable",
         "testCaseId": "fad659bf-9fda-4e43-be8f-fbf25624f7f6",
-        "fileName": "TestCase\\apiTest.xaml"
+        "fileName": "TestCase\\apiTest - Fail.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "5d1dbe80-f21f-46a1-8324-79d041532945",
+        "fileName": "TestCase\\apiTest - Pass.xaml"
       }
     ]
   },
