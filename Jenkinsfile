@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('UIPathAPITests') {
+      steps {
+        build 'UIPathAPITestOnPremise'
+      }
+    }
+
   }
 }
