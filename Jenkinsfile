@@ -3,7 +3,6 @@ pipeline {
   stages {
     stage('Git Pull') {
       steps {
-        build 'UIPathWebTestOnPremise'
         build 'RunDevelopmentProject'
       }
     }
