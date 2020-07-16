@@ -1,9 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('UIPathWebTest') {
+    stage('Git Pull') {
       steps {
         build 'UIPathWebTestOnPremise'
+        build 'RunDevelopmentProject'
       }
     }
 
