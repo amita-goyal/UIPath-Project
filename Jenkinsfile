@@ -24,5 +24,11 @@ pipeline {
       }
     }
 
+    stage('Performance') {
+      steps {
+        build 'UiPathPerformance'
+      }
+    }
+
   }
 }
