@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" this:Sequence.First_Name="John" this:Sequence.Last_Name="Smith" this:Sequence.Company_Name="IT Solutions" this:Sequence.Role_in_Company="Analyst" this:Sequence.Address="98 North Road" this:Sequence.Email="jsmith@itsolutions.co.uk" this:Sequence.Phone_Number="40716543298" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:dc="clr-namespace:Datatable.Converter;assembly=Datatable.Converter" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uj="clr-namespace:UiPathTeam.JiraGet;assembly=UiPathTeam.JiraGet" xmlns:uja="clr-namespace:UiPath.Jira.Activities;assembly=UiPath.Jira.Activities" xmlns:usa="clr-namespace:UiPath.Shared.Activities;assembly=UiPath.Jira.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" this:Sequence.First_Name="John" this:Sequence.Last_Name="Smith" this:Sequence.Company_Name="IT Solutions" this:Sequence.Role_in_Company="Analyst" this:Sequence.Address="98 North Road" this:Sequence.Email="jsmith@itsolutions.co.uk" this:Sequence.Phone_Number="40716543298" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:dc="clr-namespace:Datatable.Converter;assembly=Datatable.Converter" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uj="clr-namespace:UiPathTeam.JiraGet;assembly=UiPathTeam.JiraGet" xmlns:uja="clr-namespace:UiPath.Jira.Activities;assembly=UiPath.Jira.Activities" xmlns:usa="clr-namespace:UiPath.Shared.Activities;assembly=UiPath.Jira.Activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="First_Name" Type="InArgument(x:String)" />
     <x:Property Name="Last_Name" Type="InArgument(x:String)" />
@@ -11,10 +11,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>654,2695</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>849,2695</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Sequence_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="48">
+    <scg:List x:TypeArguments="x:String" Capacity="25">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -43,7 +43,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="25">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -133,16 +133,21 @@
                       </InArgument>
                     </ui:ReadRange.Range>
                   </ui:ReadRange>
-                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Rpa'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="567eb9644efff86ef842060cbba6248a" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;">
+                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'chrome.exe Rpa'" sap:VirtualizedContainerService.HintSize="936,4889" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="567eb9644efff86ef842060cbba6248a" Selector="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;">
                     <ui:BrowserScope.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                         </ActivityAction.Argument>
-                        <Sequence sap:VirtualizedContainerService.HintSize="902,4642" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <Sequence sap:VirtualizedContainerService.HintSize="902,4745" sap2010:WorkflowViewState.IdRef="Sequence_5">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Default="Congratulations!" Name="lableSuccess" />
                             <Variable x:TypeArguments="x:String" Name="actualValue" />
+                            <Variable x:TypeArguments="x:Boolean" Name="lbl_Compare">
+                              <Variable.Default>
+                                <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="actualValue= lableSuccess" />
+                              </Variable.Default>
+                            </Variable>
                           </Sequence.Variables>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -150,7 +155,7 @@
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dataTable]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="860,4075" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                          <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dataTable]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="860,4076" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                             <ui:ForEachRow.Body>
                               <ActivityAction x:TypeArguments="sd:DataRow">
                                 <ActivityAction.Argument>
@@ -532,7 +537,8 @@
                               </ui:Target>
                             </ui:GetAttribute.Target>
                           </ui:GetAttribute>
-                          <If Condition="[actualValue= lableSuccess]" sap:VirtualizedContainerService.HintSize="860,261" sap2010:WorkflowViewState.IdRef="If_1">
+                          <uta:VerifyExpression ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[actualValue= lableSuccess]" sap:VirtualizedContainerService.HintSize="860,61" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" TakeScreenshotInCaseOfFailingAssertion="False" />
+                          <If Condition="[actualValue= lableSuccess]" sap:VirtualizedContainerService.HintSize="860,262" sap2010:WorkflowViewState.IdRef="If_1">
                             <If.Then>
                               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Successs message verifed successfully&quot;]">
                                 <sap:WorkflowViewStateService.ViewState>
@@ -570,7 +576,7 @@
                 <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="482,1462" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>

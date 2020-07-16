@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="api" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="865.6,758.4" sap2010:WorkflowViewState.IdRef="api_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:dc="clr-namespace:Datatable.Converter;assembly=Datatable.Converter" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uj="clr-namespace:UiPathTeam.JiraGet;assembly=UiPathTeam.JiraGet" xmlns:uja="clr-namespace:UiPath.Jira.Activities;assembly=UiPath.Jira.Activities" xmlns:usa="clr-namespace:UiPath.Shared.Activities;assembly=UiPath.Jira.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="api" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="934,2558" sap2010:WorkflowViewState.IdRef="api_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:dc="clr-namespace:Datatable.Converter;assembly=Datatable.Converter" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uj="clr-namespace:UiPathTeam.JiraGet;assembly=UiPathTeam.JiraGet" xmlns:uja="clr-namespace:UiPath.Jira.Activities;assembly=UiPath.Jira.Activities" xmlns:usa="clr-namespace:UiPath.Shared.Activities;assembly=UiPath.Jira.Activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="46">
+    <scg:List x:TypeArguments="x:String" Capacity="25">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -56,7 +56,12 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="apiTest_Pass" sap:VirtualizedContainerService.HintSize="548.8,593.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="apiTest_Pass" sap:VirtualizedContainerService.HintSize="745,2313" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="res" />
       <Variable x:TypeArguments="x:Int32" Name="sCode" />
@@ -67,15 +72,15 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uj:JiraGet_Application_Scope ClientID="{x:Null}" ClientIDProd="{x:Null}" ClientSecret="{x:Null}" ClientSecretProd="{x:Null}" ExistingAuth="{x:Null}" ExistingService="{x:Null}" Password="{x:Null}" PasswordProd="{x:Null}" RefreshToken="{x:Null}" RefreshTokenProd="{x:Null}" ResponseAuth="{x:Null}" ResponseService="{x:Null}" TokenAPIProd="{x:Null}" UserNameProd="{x:Null}" ValidConnection="{x:Null}" Connection_Status="Close_at_scope_end" DisplayName="JiraGet Application Scope" EndPoint="https://testingxpert.atlassian.net/" EnvironmentType="Design_and_Test" sap:VirtualizedContainerService.HintSize="507.2,500.8" sap2010:WorkflowViewState.IdRef="JiraGet_Application_Scope_1" InvalidCommand="No" TokenAPI="eO0Tw0hGShhxLFenrcIMD413" UserName="testingxperts11@gmail.com">
+    <uj:JiraGet_Application_Scope ClientID="{x:Null}" ClientIDProd="{x:Null}" ClientSecret="{x:Null}" ClientSecretProd="{x:Null}" ExistingAuth="{x:Null}" ExistingService="{x:Null}" Password="{x:Null}" PasswordProd="{x:Null}" RefreshToken="{x:Null}" RefreshTokenProd="{x:Null}" ResponseAuth="{x:Null}" ResponseService="{x:Null}" TokenAPIProd="{x:Null}" UserNameProd="{x:Null}" ValidConnection="{x:Null}" Connection_Status="Close_at_scope_end" DisplayName="JiraGet Application Scope" EndPoint="https://testingxpert.atlassian.net/" EnvironmentType="Design_and_Test" sap:VirtualizedContainerService.HintSize="703,2221" sap2010:WorkflowViewState.IdRef="JiraGet_Application_Scope_1" InvalidCommand="No" TokenAPI="eO0Tw0hGShhxLFenrcIMD413" UserName="testingxperts11@gmail.com">
       <uj:JiraGet_Application_Scope.Body>
         <ActivityAction x:TypeArguments="uj:JiraGetProperty">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="uj:JiraGetProperty" Name="JiraGetScope" />
           </ActivityAction.Argument>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="473.6,390.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="669,2111" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <TryCatch.Try>
-              <Sequence sap:VirtualizedContainerService.HintSize="628,522.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence sap:VirtualizedContainerService.HintSize="631,618" sap2010:WorkflowViewState.IdRef="Sequence_2">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:String" Default="Ok" Name="OkBtn" />
                 </Sequence.Variables>
@@ -84,7 +89,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:HttpClient ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" Body="[&quot;{&quot;&quot;name&quot;&quot;:&quot;&quot;testtx&quot;&quot;,&quot;&quot;salary&quot;&quot;:&quot;&quot;123&quot;&quot;,&quot;&quot;age&quot;&quot;:&quot;&quot;23&quot;&quot;,&quot;&quot;id&quot;&quot;:&quot;&quot;2020&quot;&quot;}&quot;]" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EndPoint="http://dummy.restapiexample.com/api/v1/create" sap:VirtualizedContainerService.HintSize="586.4,22.4" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[res]" StatusCode="[sCode]" TimeoutMS="6000">
+                <ui:HttpClient ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" Body="[&quot;{&quot;&quot;name&quot;&quot;:&quot;&quot;testtx&quot;&quot;,&quot;&quot;salary&quot;&quot;:&quot;&quot;123&quot;&quot;,&quot;&quot;age&quot;&quot;:&quot;&quot;23&quot;&quot;,&quot;&quot;id&quot;&quot;:&quot;&quot;2020&quot;&quot;}&quot;]" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EndPoint="http://dummy.restapiexample.com/api/v1/create" sap:VirtualizedContainerService.HintSize="589,22" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[res]" StatusCode="[sCode]" TimeoutMS="6000">
                   <ui:HttpClient.Attachments>
                     <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                   </ui:HttpClient.Attachments>
@@ -101,36 +106,37 @@
                     <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
                   </ui:HttpClient.UrlSegments>
                 </ui:HttpClient>
-                <If Condition="[sCode.ToString = &quot;200&quot;]" sap:VirtualizedContainerService.HintSize="586.4,367.2" sap2010:WorkflowViewState.IdRef="If_1">
+                <uta:VerifyExpression ContinueOnFailure="True" DisplayName="Verify Expression" Expression="[sCode.ToString = &quot;200&quot;]" sap:VirtualizedContainerService.HintSize="589,61" sap2010:WorkflowViewState.IdRef="VerifyExpression_4" TakeScreenshotInCaseOfFailingAssertion="False" />
+                <If Condition="[sCode.ToString = &quot;200&quot;]" sap:VirtualizedContainerService.HintSize="589,363" sap2010:WorkflowViewState.IdRef="If_1">
                   <If.Then>
-                    <Sequence sap:VirtualizedContainerService.HintSize="271.2,155.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <Sequence sap:VirtualizedContainerService.HintSize="272,153" sap2010:WorkflowViewState.IdRef="Sequence_5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;status code=&quot;+ sCode.ToString +vbCr+&quot;Response= &quot;+res]" />
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;status code=&quot;+ sCode.ToString +vbCr+&quot;Response= &quot;+res]" />
                     </Sequence>
                   </If.Then>
                   <If.Else>
-                    <Sequence sap:VirtualizedContainerService.HintSize="271.2,217.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence sap:VirtualizedContainerService.HintSize="272,215" sap2010:WorkflowViewState.IdRef="Sequence_4">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="229.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;status code=&quot;+ sCode.ToString +vbCr+&quot;Response= &quot;+res]" />
-                      <Throw Exception="[new Exception(&quot;Status code incorrect&quot;)]" sap:VirtualizedContainerService.HintSize="229.6,22.4" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;status code=&quot;+ sCode.ToString +vbCr+&quot;Response= &quot;+res]" />
+                      <Throw Exception="[new Exception(&quot;Status code incorrect&quot;)]" sap:VirtualizedContainerService.HintSize="230,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
                     </Sequence>
                   </If.Else>
                 </If>
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="440,225.6" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="635,1183" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
@@ -138,13 +144,13 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                   </ActivityAction.Argument>
-                  <uja:JiraScope ClientID="{x:Null}" ClientSecret="{x:Null}" Connection="{x:Null}" ContinueOnError="{x:Null}" JiraConnection="{x:Null}" ApiToken="[(new System.Net.NetworkCredential(&quot;&quot;, &quot;eO0Tw0hGShhxLFenrcIMD413&quot;)).SecurePassword]" AuthenticationType="Api Token" DisplayName="Jira Scope" sap:VirtualizedContainerService.HintSize="433.6,155.2" sap2010:WorkflowViewState.IdRef="JiraScope_1" ServerURL="https://testingxpert.atlassian.net/" UserName="testingxperts11@gmail.com">
+                  <uja:JiraScope ClientID="{x:Null}" ClientSecret="{x:Null}" Connection="{x:Null}" ContinueOnError="{x:Null}" JiraConnection="{x:Null}" ApiToken="[(new System.Net.NetworkCredential(&quot;&quot;, &quot;eO0Tw0hGShhxLFenrcIMD413&quot;)).SecurePassword]" AuthenticationType="Api Token" DisplayName="Jira Scope" sap:VirtualizedContainerService.HintSize="434,1114" sap2010:WorkflowViewState.IdRef="JiraScope_1" ServerURL="https://testingxpert.atlassian.net/" UserName="testingxperts11@gmail.com">
                     <uja:JiraScope.Body>
                       <ActivityAction x:TypeArguments="usa:IObjectContainer">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="usa:IObjectContainer" Name="ScopeActivity" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,68.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1028" sap2010:WorkflowViewState.IdRef="Sequence_3">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="sd:DataTable" Name="listIssueID" />
                             <Variable x:TypeArguments="x:String" Name="getIssueID" />
@@ -156,14 +162,14 @@
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <uja:CreateIssue ContinueOnError="{x:Null}" Issue="{x:Null}" ParentIssueKey="{x:Null}" DisplayName="Create Issue" sap:VirtualizedContainerService.HintSize="334.4,232" sap2010:WorkflowViewState.IdRef="CreateIssue_1" IssueDescription="Testing on API" IssueSummary="API Bug creation test" IssueType="Bug" ProjectKey="UIP">
+                          <uja:CreateIssue ContinueOnError="{x:Null}" Issue="{x:Null}" ParentIssueKey="{x:Null}" DisplayName="Create Issue" sap:VirtualizedContainerService.HintSize="334,228" sap2010:WorkflowViewState.IdRef="CreateIssue_1" IssueDescription="Testing on API" IssueSummary="API Bug creation test" IssueType="Bug" ProjectKey="UIP">
                             <uja:CreateIssue.AdditionalFields>
                               <scg:Dictionary x:TypeArguments="x:String, InArgument" />
                             </uja:CreateIssue.AdditionalFields>
                           </uja:CreateIssue>
-                          <uj:Get_Ticket_SQL Response="{x:Null}" Result="{x:Null}" ValidConnection="{x:Null}" DataResult="[listIssueID]" DisplayName="Get Issue SQL" sap:VirtualizedContainerService.HintSize="334.4,60.8" sap2010:WorkflowViewState.IdRef="Get_Ticket_SQL_1" InvalidCommand="No" Search="[&quot;SELECT issuekey FROM issue WHERE project='UIPathDemo' ORDER BY created DESC LIMIT 1&quot;]" />
-                          <dc:ConvertToString ColumnSeparator="\t" DisplayName="Convert to string" sap:VirtualizedContainerService.HintSize="334.4,22.4" sap2010:WorkflowViewState.IdRef="ConvertToString_1" InputDataTable="[listIssueID]" Response="[getIssueID]" />
-                          <Assign sap:VirtualizedContainerService.HintSize="334.4,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                          <uj:Get_Ticket_SQL Response="{x:Null}" Result="{x:Null}" ValidConnection="{x:Null}" DataResult="[listIssueID]" DisplayName="Get Issue SQL" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Get_Ticket_SQL_1" InvalidCommand="No" Search="[&quot;SELECT issuekey FROM issue WHERE project='UIPathDemo' ORDER BY created DESC LIMIT 1&quot;]" />
+                          <dc:ConvertToString ColumnSeparator="\t" DisplayName="Convert to string" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ConvertToString_1" InputDataTable="[listIssueID]" Response="[getIssueID]" />
+                          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[IssueID]</OutArgument>
                             </Assign.To>
