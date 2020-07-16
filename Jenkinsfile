@@ -24,7 +24,7 @@ pipeline {
       }
     }
 
-    stage('Performance') {
+    stage('Performance Scripts') {
       steps {
         build 'UiPathPerformance'
       }
