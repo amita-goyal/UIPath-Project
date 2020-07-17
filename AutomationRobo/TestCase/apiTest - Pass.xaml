@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="api" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="892,673.6" sap2010:WorkflowViewState.IdRef="api_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uj="clr-namespace:UiPathTeam.JiraGet;assembly=UiPathTeam.JiraGet" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="api" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="848,1740.8" sap2010:WorkflowViewState.IdRef="api_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uj="clr-namespace:UiPathTeam.JiraGet;assembly=UiPathTeam.JiraGet" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="25">
+    <scg:List x:TypeArguments="x:String" Capacity="26">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -26,6 +26,7 @@
       <x:String>Atlassian.Jira</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
       <x:String>System.Net</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -61,11 +62,14 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="apiTest_Pass" sap:VirtualizedContainerService.HintSize="475.2,508.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="apiTest_Pass" sap:VirtualizedContainerService.HintSize="475.2,636.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="res" />
       <Variable x:TypeArguments="x:Int32" Name="sCode" />
       <Variable x:TypeArguments="x:String" Name="request" />
+      <Variable x:TypeArguments="x:String" Name="reportContent" />
+      <Variable x:TypeArguments="x:String" Name="Content" />
+      <Variable x:TypeArguments="snm:MailMessage" Name="newMail" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -75,15 +79,9 @@
     <t:StartTest DisplayName="Start test" sap:VirtualizedContainerService.HintSize="433.6,22.4" sap2010:WorkflowViewState.IdRef="StartTest_1" ScenarioName="API Test - Pass" Status="STARTED" TestCase="Pass Test" />
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="433.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\ReportUtil.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="Report_Name">
-          <Literal x:TypeArguments="x:String">Api Test Report</Literal>
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Suite_Name">
-          <Literal x:TypeArguments="x:String">API TEST</Literal>
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Test_Name">
-          <Literal x:TypeArguments="x:String">API Test - Pass</Literal>
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Report_Name">Api Test Report</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Suite_Name">API TEST</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Test_Name">API Test - Pass</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <uj:JiraGet_Application_Scope ClientID="{x:Null}" ClientIDProd="{x:Null}" ClientSecret="{x:Null}" ClientSecretProd="{x:Null}" ExistingAuth="{x:Null}" ExistingService="{x:Null}" Password="{x:Null}" PasswordProd="{x:Null}" RefreshToken="{x:Null}" RefreshTokenProd="{x:Null}" ResponseAuth="{x:Null}" ResponseService="{x:Null}" TokenAPIProd="{x:Null}" UserNameProd="{x:Null}" ValidConnection="{x:Null}" Connection_Status="Close_at_scope_end" DisplayName="JiraGet Application Scope" EndPoint="https://testingxpert.atlassian.net/" EnvironmentType="Design_and_Test" sap:VirtualizedContainerService.HintSize="433.6,163.2" sap2010:WorkflowViewState.IdRef="JiraGet_Application_Scope_1" InvalidCommand="No" TokenAPI="eO0Tw0hGShhxLFenrcIMD413" UserName="testingxperts11@gmail.com">
@@ -218,5 +216,15 @@
       </uj:JiraGet_Application_Scope.Body>
     </uj:JiraGet_Application_Scope>
     <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="433.6,22.4" sap2010:WorkflowViewState.IdRef="EndTest_2" Status="PASSED" />
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="433.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Framework\SendEmailUtil.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="Receiver">
+          <Literal x:TypeArguments="x:String">nitin.verma@testingxperts.com</Literal>
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Subject">
+          <Literal x:TypeArguments="x:String">API Test Report</Literal>
+        </InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
   </Sequence>
 </Activity>
