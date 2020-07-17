@@ -8,14 +8,19 @@ pipeline {
     }
 
     stage('UIPathWebTests') {
-      steps {
-        build 'UIPathWebTestOnPremise'
-      }
-    }
+      parallel {
+        stage('UIPathWebTests') {
+          steps {
+            build 'UIPathWebTestOnPremise'
+          }
+        }
 
-    stage('UIPathAPITests') {
-      steps {
-        build 'UIPathAPITestOnPremise'
+        stage('UIPAthAPITest') {
+          steps {
+            build 'UIPathAPITestOnPremise'
+          }
+        }
+
       }
     }
 
