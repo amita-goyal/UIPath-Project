@@ -24,9 +24,10 @@ pipeline {
       }
     }
 
-    stage('Performance Scripts') {
+    stage('UIPathAPITests') {
       steps {
         build 'UiPathPerformance'
+        build 'UIPathAPITestOnPremise'
       }
     }
 
