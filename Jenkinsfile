@@ -21,12 +21,12 @@ pipeline {
           }
         }
 
-      }
-    }
+        stage('Performance Scripts') {
+          steps {
+            build 'UiPathPerformance'
+          }
+        }
 
-    stage('Performance Scripts') {
-      steps {
-        build 'UiPathPerformance'
       }
     }
 
