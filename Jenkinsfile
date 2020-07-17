@@ -7,27 +7,21 @@ pipeline {
       }
     }
 
-    stage('UIPath') {
-      parallel {
-        stage('UIPathWebTests') {
-          steps {
-            build 'UIPathWebTestOnPremise'
-          }
-        }
-
-        stage('UIPathAPITests') {
-          steps {
-            build 'UIPathAPITestOnPremise'
-          }
-        }
-
+    stage('UIPathWebTests') {
+      steps {
+        build 'UIPathWebTestOnPremise'
       }
     }
 
     stage('UIPathAPITests') {
       steps {
-        build 'UiPathPerformance'
         build 'UIPathAPITestOnPremise'
+      }
+    }
+
+    stage('Performance Scripts') {
+      steps {
+        build 'UiPathPerformance'
       }
     }
 
