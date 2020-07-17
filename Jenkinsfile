@@ -7,7 +7,7 @@ pipeline {
       }
     }
 
-    stage('UIPathWebTests') {
+    stage('UIPath') {
       parallel {
         stage('UIPathWebTests') {
           steps {
