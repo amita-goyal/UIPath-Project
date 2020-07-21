@@ -24,7 +24,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>892,1452.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>684.8,1639.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>api_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="25">
@@ -89,7 +89,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="apiTest - Fail" sap:VirtualizedContainerService.HintSize="550.4,1248" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="JiraUtil" sap:VirtualizedContainerService.HintSize="550.4,1354.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="res" />
       <Variable x:TypeArguments="x:Int32" Name="sCode" />
@@ -101,25 +101,25 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uj:JiraGet_Application_Scope ClientID="{x:Null}" ClientIDProd="{x:Null}" ClientSecret="{x:Null}" ClientSecretProd="{x:Null}" ExistingAuth="{x:Null}" ExistingService="{x:Null}" Password="{x:Null}" PasswordProd="{x:Null}" RefreshToken="{x:Null}" RefreshTokenProd="{x:Null}" ResponseAuth="{x:Null}" ResponseService="{x:Null}" TokenAPIProd="{x:Null}" UserNameProd="{x:Null}" ValidConnection="{x:Null}" Connection_Status="Close_at_scope_end" DisplayName="JiraGet Application Scope" EndPoint="https://testingxpert.atlassian.net/" EnvironmentType="Design_and_Test" sap:VirtualizedContainerService.HintSize="508.8,1155.2" sap2010:WorkflowViewState.IdRef="JiraGet_Application_Scope_1" InvalidCommand="No" TokenAPI="eO0Tw0hGShhxLFenrcIMD413" UserName="testingxperts11@gmail.com">
+    <uj:JiraGet_Application_Scope ClientID="{x:Null}" ClientIDProd="{x:Null}" ClientSecret="{x:Null}" ClientSecretProd="{x:Null}" ExistingAuth="{x:Null}" ExistingService="{x:Null}" Password="{x:Null}" PasswordProd="{x:Null}" RefreshToken="{x:Null}" RefreshTokenProd="{x:Null}" ResponseAuth="{x:Null}" ResponseService="{x:Null}" TokenAPIProd="{x:Null}" UserNameProd="{x:Null}" ValidConnection="{x:Null}" Connection_Status="Close_at_scope_end" DisplayName="JiraGet Application Scope" EndPoint="https://testingxpert.atlassian.net/" EnvironmentType="Design_and_Test" sap:VirtualizedContainerService.HintSize="508.8,1261.6" sap2010:WorkflowViewState.IdRef="JiraGet_Application_Scope_1" InvalidCommand="No" TokenAPI="eO0Tw0hGShhxLFenrcIMD413" UserName="testingxperts11@gmail.com">
       <uj:JiraGet_Application_Scope.Body>
         <ActivityAction x:TypeArguments="uj:JiraGetProperty">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="uj:JiraGetProperty" Name="JiraGetScope" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="475.2,1044.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence sap:VirtualizedContainerService.HintSize="475.2,1151.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uja:JiraScope ClientID="{x:Null}" ClientSecret="{x:Null}" Connection="{x:Null}" ContinueOnError="{x:Null}" JiraConnection="{x:Null}" ApiToken="[(new System.Net.NetworkCredential(&quot;&quot;, &quot;eO0Tw0hGShhxLFenrcIMD413&quot;)).SecurePassword]" AuthenticationType="Api Token" DisplayName="Jira Scope" sap:VirtualizedContainerService.HintSize="433.6,952" sap2010:WorkflowViewState.IdRef="JiraScope_1" ServerURL="https://testingxpert.atlassian.net/" UserName="testingxperts11@gmail.com">
+            <uja:JiraScope ClientID="{x:Null}" ClientSecret="{x:Null}" Connection="{x:Null}" ContinueOnError="{x:Null}" JiraConnection="{x:Null}" ApiToken="[(new System.Net.NetworkCredential(&quot;&quot;, &quot;eO0Tw0hGShhxLFenrcIMD413&quot;)).SecurePassword]" AuthenticationType="Api Token" DisplayName="Jira Scope" sap:VirtualizedContainerService.HintSize="433.6,1058.4" sap2010:WorkflowViewState.IdRef="JiraScope_1" ServerURL="https://testingxpert.atlassian.net/" UserName="testingxperts11@gmail.com">
               <uja:JiraScope.Body>
                 <ActivityAction x:TypeArguments="usa:IObjectContainer">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="usa:IObjectContainer" Name="ScopeActivity" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,865.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,972" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="sd:DataTable" Name="listIssueID" />
                       <Variable x:TypeArguments="x:String" Name="getIssueID" />
@@ -146,6 +146,20 @@
                       </Assign.Value>
                     </Assign>
                     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="333.6,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;IssueID: &quot; + IssueID]" />
+                    <uj:Update_Ticket Response="{x:Null}" Result="{x:Null}" ValidConnection="{x:Null}" DisplayName="Update Issue" sap:VirtualizedContainerService.HintSize="333.6,66.4" sap2010:WorkflowViewState.IdRef="Update_Ticket_1" InvalidCommand="No" cmdTYPE="UpdateIssue" key="[IssueID]">
+                      <uj:Update_Ticket.Parameters>
+                        <scg:List x:TypeArguments="uj:ParametersArgument" Capacity="4">
+                          <uj:ParametersArgument>
+                            <uj:ParametersArgument.Parameter>
+                              <InArgument x:TypeArguments="x:String">environment</InArgument>
+                            </uj:ParametersArgument.Parameter>
+                            <uj:ParametersArgument.ValueData>
+                              <InArgument x:TypeArguments="x:String">Windows</InArgument>
+                            </uj:ParametersArgument.ValueData>
+                          </uj:ParametersArgument>
+                        </scg:List>
+                      </uj:Update_Ticket.Parameters>
+                    </uj:Update_Ticket>
                     <uja:AddAttachment Attachment="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Add Attachment" FilePath="[Attachment_FIle]" sap:VirtualizedContainerService.HintSize="333.6,134.4" sap2010:WorkflowViewState.IdRef="AddAttachment_1" IssueKey="[IssueID]" />
                   </Sequence>
                 </ActivityAction>
