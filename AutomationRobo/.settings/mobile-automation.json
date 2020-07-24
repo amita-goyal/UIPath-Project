@@ -1,0 +1,31 @@
+{
+  "GenerateCrossPlatformAttributes": false,
+  "GenerateSelectorsForInnerElements": true,
+  "Connections": [
+    {
+      "Name": "Pixel ",
+      "Description": null,
+      "Url": "http://127.0.0.1:4723/wd/hub",
+      "PlatformName": "Android",
+      "PlatformVersion": "8.1",
+      "DeviceName": "Pixel",
+      "Capabilities": {}
+    }
+  ],
+  "Applications": [
+    {
+      "Name": "ebay",
+      "Description": null,
+      "Type": "App",
+      "Platforms": {
+        "Android": {
+          "Capabilities": {
+            "app": "C:\\Users\\nitin.verma\\Desktop\\UIPath-Project\\AutomationRobo\\ebay.apk"
+          },
+          "StartPage": null
+        }
+      }
+    }
+  ],
+  "IdsMaxAllowedLength": 40
+}
