@@ -20,7 +20,7 @@
       "Platforms": {
         "Android": {
           "Capabilities": {
-            "app": "C:\\Users\\nitin.verma\\Desktop\\UIPath-Project\\AutomationRobo\\ebay.apk"
+            "app": "E:\\ebay.apk"
           },
           "StartPage": null
         }
