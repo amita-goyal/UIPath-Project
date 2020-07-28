@@ -15,13 +15,19 @@ pipeline {
           }
         }
 
-        stage('UIPAthAPITest') {
+        stage('UIPathAPITests') {
           steps {
             build 'UIPathAPITestOnPremise'
           }
         }
 
-        stage('Performance Scripts') {
+        stage('UIPathMobileTests') {
+          steps {
+            build 'UIPathMobileTests'
+          }
+        }
+
+        stage('PerformanceScripts') {
           steps {
             build 'UiPathPerformance'
           }
