@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>855.2,860</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>888.8,860</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SendEmailUtil_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -89,7 +89,7 @@
       </ui:GetRowItem.Value>
     </ui:GetRowItem>
     <ui:ReadTextFile Content="[reportContent]" DisplayName="Read Text File" FileName="Testing-Report.html" sap:VirtualizedContainerService.HintSize="384,80.8" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-    <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="384,22.4" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaDr3Ua7g2U+tbR23b/oVCgAAAAACAAAAAAADZgAAwAAAABAAAABWny6ta2+/YjPO5BYIRmfHAAAAAASAAACgAAAAEAAAAOtIoy4b9kMIvNGy5lTQ5IMQAAAALks+FITdQNBDWUaHOIsxsBQAAABDY+BPPPbv8DqJPfGYqFH1vRFdOg==" Result="[password]" />
+    <ui:GetPassword DisplayName="Get Password" sap:VirtualizedContainerService.HintSize="384,22.4" sap2010:WorkflowViewState.IdRef="GetPassword_1" ProtectedPassword="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaDr3Ua7g2U+tbR23b/oVCgAAAAACAAAAAAADZgAAwAAAABAAAADH+ZHY1wLqCarL4rcA3vM7AAAAAASAAACgAAAAEAAAACqyditfcvLzqJ7wlP7q0pgQAAAAO8onJ51lTov286d/4nVz3xQAAABa0pmNT1N6u7rEL7NYXsK0m+yy4A==" Result="[password]" />
     <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" Body="[&quot;Hi All,&lt;br&gt;Please find the attached Execution Report.&lt;br&gt;&quot;+reportContent+&quot;&lt;br&gt;Thanks &amp; Regards&lt;br&gt;Testing Xperts&quot;]" DisplayName="Send SMTP Mail Message" Email="[username]" EnableSSL="True" From="[username]" sap:VirtualizedContainerService.HintSize="384,146.4" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="True" Name="TX" Password="[password]" Port="587" SecureConnection="Auto" Server="smtp.gmail.com" Subject="[Subject]" TimeoutMS="5000" To="damcotestuser@gmail.com">
       <ui:SendMail.Files>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
