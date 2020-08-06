@@ -1,17 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Test-Suite name="UiPath Project - Test Automation" total="2" passed="1" failures="1" execution-date="08/05/2020 17:06:00" total-time="00:03:59">
+<Test-Suite name="UiPath Project - Test Automation" total="4" passed="2" failures="2" execution-date="08/06/2020 12:43:06" total-time="00:02:15">
   <Result>
-    <TestScenario>Ebay Test - Fail</TestScenario>
+    <TestScenario>RPA Challenge Test - Fail</TestScenario>
     <TestName>Fail Test</TestName>
-    <Started>08/05/2020 17:03:51</Started>
-    <Ended>08/05/2020 17:06:00</Ended>
+    <Started>08/06/2020 12:42:37</Started>
+    <Ended>08/06/2020 12:43:06</Ended>
     <Status>FAILED</Status>
   </Result>
   <Result>
-    <TestScenario>Ebay Test - Pass</TestScenario>
+    <TestScenario>RPA Challenge Test - Pass</TestScenario>
     <TestName>Pass Test</TestName>
-    <Started>08/05/2020 17:06:03</Started>
-    <Ended>08/05/2020 17:07:53</Ended>
+    <Started>08/06/2020 12:43:08</Started>
+    <Ended>08/06/2020 12:43:26</Ended>
     <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>RPA Challenge Test - Pass</TestScenario>
+    <TestName>Pass Test</TestName>
+    <Started>08/06/2020 12:46:56</Started>
+    <Ended>08/06/2020 12:47:13</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>RPA Challenge Test - Pass</TestScenario>
+    <TestName>Pass Test</TestName>
+    <Started>08/06/2020 13:20:00</Started>
+    <Ended>08/06/2020 13:21:11</Ended>
+    <Status>FAILED</Status>
   </Result>
 </Test-Suite>
